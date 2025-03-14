@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGMP - Sahid Ganesh Memorial Pratisthan</title>
+    <style>
+        /* Mobile-first CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            position: relative;
+            margin: 5px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #444;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        li:hover .dropdown {
+            display: block;
+        }
+
+        .background-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .background-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blinking-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Sections */
+        section {
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .programs-table {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .dropdown {
+                position: static;
+                background: #555;
+            }
+
+            .blinking-text {
+                font-size: 1em;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="sgmp-logo.png" alt="SGMP Logo">
+        </div>
+        
+            <!-- Keep your existing navigation structure -->
+<nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Organization Overview</a>
+                    <ul class="dropdown">
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="executive-board.html">Executive Board</a></li>
+                        <li><a href="annual-data.html">Annual Data</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="health.html">Health</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="tourism.html">Tourism</a></li>
+                        <li><a href="infrastructure.html">Infrastructure</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news-events.html">News/Events</a></li>
+                <li><a href="notices.html">Notices</a></li>
+                <li><a href="support-us.html">Support Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-image">
+        <img src="homepage.jpeg" alt="background image">
+        <div class="blinking-text">
+            In Reverence to the Brave
+        </div>
+    </div>
+
+    <!-- Rest of your content sections (keep existing structure) -->
+<link rel="stylesheet" href="styles.css">    
+<!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Sahid Ganesh Memorial Pratisthan</h1>
+            <p>Empowering communities, transforming lives.</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>We are a nonprofit organization dedicated to making a difference in the world. Our mission is to:</p>
+        <ul>
+            <li>Provide education and resources to underserved communities.</li>
+            <li>Promote health and well-being through accessible programs.</li>
+            <li>Advocate for social justice and equality.</li>
+        </ul>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <h2>Our Programs</h2>
+        <div class="programs-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Program</th>
+                        <th>Description</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Education for All</td>
+                        <td>Providing free education to children in rural areas.</td>
+                        <td>500+ children educated annually.</td>
+                    </tr>
+                    <tr>
+                        <td>Health Camps</td>
+                        <td>Organizing free health check-ups and treatments.</td>
+                        <td>1,000+ patients served yearly.</td>
+                    </tr>
+                    <tr>
+                        <td>Women Empowerment</td>
+                        <td>Skill development and entrepreneurship training.</td>
+                        <td>200+ women trained annually.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="pratima header.jpg" alt="Health">
+            <img src="galleryshanti2.jpg" alt="Meating with former prime-minister about program of SGMP ">
+            <img src="galleryshanti3.jpg" alt="Meating with former finance minister for martyrs rights">
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Join Us in Making a Difference</h2>
+        <p>
+            Your support can change lives. You can register or contact our staff and members to share your concerns, and we will work to address your essential needs. Your insights into public health challenges are invaluable—help us identify critical issues so we can take meaningful action.
+        </p>
+        <p>
+            We welcome your direct participation! You can register to volunteer, contribute essential medicines, or provide medical equipment. Please note that all contributions must be reviewed and approved by our executive team to ensure they align with our mission and standards. Together, we can create a healthier and stronger community.
+        </p>
+        <a href="support-us.html" class="cta-button">Donate Now</a>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-section">
+        <h2>Book your appointment</h2>
+        <img src="contact on.jpg" alt="Contact Information" width="100" height="50">
+        <h3>
+            <p>Email: sahidganeshmemorial@gmail.com</p>
+            <p>Phone no.: +9779858038561</p>
+            <p>SGMP Head Office: Birendranagar-08, Surkhet, Karnali Province, Nepal</p>
+<p> Connect us on social media</p>
+<!-- Social Media Text Logos -->
+    <div class="social-media-text" left>
+        <a href="https://www.facebook.com/profile.php?id=61574199023230" target="_blank">Facebook</a> | 
+        <a href="https://x.com/SGMP_org" target="_blank" class="twitter">Twitter</a>
+    </div>
+    </section>
+
+    </main>
+  <!-- Footer Section -->
+    <footer><footer style="height: 15px; padding: 5px; font-size: 12px;">
+<p>&copy; 2023 Sahid Ganesh Memorial Pratisthan. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
